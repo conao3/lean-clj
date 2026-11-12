@@ -1,3 +1,5 @@
+> **This project moved to [conao3/lean-leanfran](https://github.com/conao3/lean-leanfran/tree/master/Clojure).** Development continues in its `Clojure/` directory.
+
 <p align="center">
   <img src="docs/assets/banner.png" alt="lean-clj" width="100%">
 </p>
