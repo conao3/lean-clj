@@ -18,13 +18,13 @@
 </p>
 
 <p align="center">
-  <a href="#installation">Installation</a> ·
-  <a href="#quick-start">Quick start</a> ·
-  <a href="#deflean">deflean</a> ·
-  <a href="#verifying-clojure-functions">Verifying Clojure</a> ·
-  <a href="#the-cli">CLI</a> ·
-  <a href="#samples">Samples</a> ·
-  <a href="https://clojars.org/io.github.conao3/lean-clj">Clojars</a> ·
+  <a href="#installation">Installation</a> |
+  <a href="#quick-start">Quick start</a> |
+  <a href="#deflean">deflean</a> |
+  <a href="#verifying-clojure-functions">Verifying Clojure</a> |
+  <a href="#the-cli">CLI</a> |
+  <a href="#samples">Samples</a> |
+  <a href="https://clojars.org/io.github.conao3/lean-clj">Clojars</a> |
   <a href="https://github.com/conao3/lean-clj/tags">Releases</a>
 </p>
 
