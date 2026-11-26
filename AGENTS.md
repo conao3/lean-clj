@@ -33,3 +33,9 @@ in Clojure (`src/lean_clj/core.clj`). See README.md for usage.
 ```
 nix develop --command make check
 ```
+
+## Release
+
+```
+gh workflow run release.yml --ref master -f version_bump=patch
+```
