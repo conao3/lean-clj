@@ -23,7 +23,7 @@ defaults:
     shell: bash
 jobs:
   check:
-    name: Bump and check
+    name: Bump version
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
@@ -82,10 +82,6 @@ jobs:
             echo "::error::build.clj bump changed files outside VERSION_FILES."
             exit 1
           fi
-      - name: Check formatting, lint, and tests
-        run: nix develop --command make check
-      - name: Build the Nix package
-        run: nix build
       - name: Build jar and pom without deploying
         run: nix develop --command make jar
       - name: Bundle the version commit

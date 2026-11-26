@@ -375,8 +375,8 @@ gh workflow run release.yml --ref master -f version_bump=patch
 ```
 
 `version_bump` is `patch`, `minor`, or `major`. The workflow raises the version
-with `clojure -T:build bump :part <part>`, runs `make check`, `nix build` and
-`make jar` on the version commit, pushes the commit and the tag `vX.Y.Z` to
+with `clojure -T:build bump :part <part>`, runs `make jar` on the version
+commit, pushes the commit and the tag `vX.Y.Z` to
 `master`, deploys the jar to Clojars, and creates the GitHub Release. If a job
 after the tag push fails, re-run the failed jobs of the same run.
 
