@@ -368,10 +368,17 @@ make format
 `./test-diff.sh` runs `LeanCljTest.Vectors.report` compiled by Lean's C backend
 and the same function generated as Clojure, and compares the output.
 
-The `Release` workflow publishes releases (Actions → Release → Run workflow,
-choosing `patch`, `minor`, or `major`). It raises the version with
-`clojure -T:build bump :part <part>`, runs `make check`, pushes the commit and
-the tag `vX.Y.Z` to `master`, and deploys the jar to Clojars.
+The `Release` workflow publishes releases:
+
+```
+gh workflow run release.yml --ref master -f version_bump=patch
+```
+
+`version_bump` is `patch`, `minor`, or `major`. The workflow raises the version
+with `clojure -T:build bump :part <part>`, runs `make check`, `nix build` and
+`make jar` on the version commit, pushes the commit and the tag `vX.Y.Z` to
+`master`, deploys the jar to Clojars, and creates the GitHub Release. If a job
+after the tag push fails, re-run the failed jobs of the same run.
 
 ## License
 
