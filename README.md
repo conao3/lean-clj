@@ -73,14 +73,14 @@ messages next to the Lean source of the block.
 Add lean-clj to `deps.edn` ([Clojars](https://clojars.org/io.github.conao3/lean-clj)):
 
 ```clojure
-{:deps {io.github.conao3/lean-clj {:mvn/version "0.3.0"}}}
+{:deps {io.github.conao3/lean-clj {:mvn/version "0.3.1"}}}
 ```
 
 The first expansion of a `deflean` block needs Lean 4.35.0 (`lean`, `lake`)
 and the `lean-clj` CLI on `PATH`:
 
 ```
-nix profile install github:conao3/lean-clj/v0.3.0
+nix profile install github:conao3/lean-clj/v0.3.1
 ```
 
 Get Lean from elan (`elan default v4.35.0`) or from `nix develop` of this
